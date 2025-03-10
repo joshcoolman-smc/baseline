@@ -8,8 +8,21 @@ import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { CheckSupabaseConfig } from "@/components/auth/check-supabase-config";
 
 export default async function Login({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) {
+  return (
+    <CheckSupabaseConfig>
+      <LoginContent searchParams={searchParams} />
+    </CheckSupabaseConfig>
+  );
+}
+
+async function LoginContent({
   searchParams,
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;

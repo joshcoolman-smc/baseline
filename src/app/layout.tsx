@@ -18,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${bitter.className} antialiased`}>
+      <body
+        className={`${bitter.className} antialiased`}
+        suppressHydrationWarning
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <GlobalNav />
           <div className="min-h-screen w-full bg-zinc-100 dark:bg-zinc-950">
