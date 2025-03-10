@@ -3,6 +3,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { AuthNavItems } from "@/components/auth-nav-items";
 import { UserInfo } from "@/components/user-info";
 import { CheckSupabaseConfig } from "@/components/auth/check-supabase-config";
+import Link from "next/link";
 
 function GlobalNavContent({
   isAuthenticated,
@@ -14,9 +15,12 @@ function GlobalNavContent({
   return (
     <nav className="flex justify-between items-center p-4 bg-zinc-200 dark:bg-zinc-900">
       <div>
-        <div className="text-zinc-900 dark:text-zinc-300 text-2xl font-bold">
+        <Link
+          href="/"
+          className="text-zinc-900 dark:text-zinc-300 text-2xl font-bold hover:opacity-80"
+        >
           Baseline
-        </div>
+        </Link>
         <UserInfo email={email} />
       </div>
       <div className="flex items-center gap-4">
@@ -31,9 +35,12 @@ function GlobalNavFallback() {
   return (
     <nav className="flex justify-between items-center p-4 bg-zinc-200 dark:bg-zinc-900">
       <div>
-        <div className="text-zinc-900 dark:text-zinc-300 text-2xl font-bold">
+        <Link
+          href="/"
+          className="text-zinc-900 dark:text-zinc-300 text-2xl font-bold hover:opacity-80"
+        >
           Baseline
-        </div>
+        </Link>
         <UserInfo email={null} />
       </div>
       <div className="flex items-center gap-4">

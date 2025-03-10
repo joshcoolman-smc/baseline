@@ -53,7 +53,7 @@ export function AuthNavItems({ email, isAuthenticated }: AuthNavItemsProps) {
           variant="ghost"
           onClick={handleLogout}
           disabled={isLoading}
-          className="text-red-400 disabled:opacity-50"
+          className="disabled:opacity-50 cursor-pointer"
         >
           {isLoading ? "Signing out..." : "Logout"}
         </Button>
