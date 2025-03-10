@@ -1,6 +1,5 @@
 import { createClient } from "@/app/(auth)/_supabase/server";
 import { redirect } from "next/navigation";
-import UserLogoutHeader from "../(auth)/_components/user-logout-header";
 
 export default async function Dashboard() {
   const supabase = await createClient();
@@ -14,8 +13,7 @@ export default async function Dashboard() {
   }
 
   return (
-    <div className="px-4">
-      <UserLogoutHeader email={user.email || ""} />
+    <div className="p-4">
       <div className="space-y-6">
         <h1 className="text-2xl font-bold">
           Dashboard

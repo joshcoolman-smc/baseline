@@ -40,7 +40,6 @@ export function AuthNavItems({ email, isAuthenticated }: AuthNavItemsProps) {
   if (isAuthenticated) {
     return (
       <>
-        <p className="text-sm font-medium text-sky-300">{email}</p>
         <Button
           variant="ghost"
           className={
